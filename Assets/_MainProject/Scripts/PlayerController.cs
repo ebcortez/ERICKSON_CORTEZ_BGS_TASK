@@ -22,7 +22,6 @@ namespace InterviewTask {
 
 		public void Move(InputAction.CallbackContext context) {
 			inputMovement = context.ReadValue<Vector2>();
-			Debug.Log(inputMovement);
 		}
 
 		public void Interact(InputAction.CallbackContext context) {
