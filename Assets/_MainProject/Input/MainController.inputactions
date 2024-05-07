@@ -109,7 +109,13 @@
         {
             "name": "Player Keyboard",
             "bindingGroup": "Player Keyboard",
-            "devices": []
+            "devices": [
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
         }
     ]
 }
