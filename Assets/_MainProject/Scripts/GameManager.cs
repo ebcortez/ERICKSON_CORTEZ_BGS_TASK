@@ -7,6 +7,8 @@ namespace InterviewTask {
 		private static GameManager instance;
 		public static GameManager Instance => instance;
 
+		private const int EARNED_GOLD_PER_SECOND = 10;
+		private const int DEFAULT_GOLD = 1000;
 		private const string GOLD_ID = "GOLD_ID";
 
 		public int Gold { 
@@ -21,10 +23,16 @@ namespace InterviewTask {
 			instance = this;
 
 			if(!PlayerPrefs.HasKey(GOLD_ID)) {
-				SetGold(1000);
+				SetGold(DEFAULT_GOLD);
 			} else {
 				UIGameplayUI.Instance.UpdateGoldText();
 			}
+
+			InvokeRepeating("EarnGoldPerSecond", 1, 1);
+		}
+
+		private void EarnGoldPerSecond() {
+			EarnGold(EARNED_GOLD_PER_SECOND);
 		}
 
 		private void SetGold(int amount) {
