@@ -15,3 +15,4 @@ MonoBehaviour:
   itemSprite: {fileID: 697725235, guid: 591abd10fb734eb4984836434a5a8675, type: 3}
   itemName: Pointy
   animationId: 2
+  isLocked: 1

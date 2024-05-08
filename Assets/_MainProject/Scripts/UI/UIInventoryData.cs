@@ -10,10 +10,14 @@ namespace InterviewTask {
 		[SerializeField] private InventoryData itemData;
 		[SerializeField] private TextMeshProUGUI itemNameText;
 		[SerializeField] private Image itemIconImage;
+		[SerializeField] private TextMeshProUGUI isLockedNoticeText;
 
 		public Action<InventoryItemData> onItemChanged;
 
+		private const string CURRENT_ITEM_ID = "CURRENT_ITEM_ID";
+
 		private void Start() {
+			itemData.CurrentItemId = PlayerPrefs.GetInt(CURRENT_ITEM_ID, 0); 
 			UpdateCurrentItem();
 		}
 
@@ -38,7 +42,11 @@ namespace InterviewTask {
 		private void UpdateCurrentItem() {
 			itemNameText.text = itemData.CurrentInventoryItem.ItemName;
 			itemIconImage.sprite = itemData.CurrentInventoryItem.ItemSprite;
-			onItemChanged?.Invoke(itemData.CurrentInventoryItem);
+			isLockedNoticeText.enabled = itemData.CurrentInventoryItem.IsLocked;
+			if(!itemData.CurrentInventoryItem.IsLocked) {
+				PlayerPrefs.SetInt(CURRENT_ITEM_ID, itemData.CurrentItemId);
+				onItemChanged?.Invoke(itemData.CurrentInventoryItem); 
+			}
 		}
 	}
 }

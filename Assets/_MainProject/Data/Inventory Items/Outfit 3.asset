@@ -15,3 +15,4 @@ MonoBehaviour:
   itemSprite: {fileID: -1334554742, guid: 53cc10cc51e91d149ba8e06b387a63e4, type: 3}
   itemName: Peasant Farmer Outfit
   animationId: 2
+  isLocked: 1

@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 48ebb180fc709c04fa4f61972e18157b, type: 3}
-  m_Name: Hairs Data
+  m_Name: Inventory Outfits Data
   m_EditorClassIdentifier: 
   inventoryItemDatas:
-  - {fileID: 11400000, guid: 9ea8982d1f7441d429b88f6e3433c96e, type: 2}
-  - {fileID: 11400000, guid: 2db6724b13203824e94dc94549ab421a, type: 2}
-  - {fileID: 11400000, guid: fbc83f54df0d6ab43853d60a7cdde676, type: 2}
+  - {fileID: 11400000, guid: ee9ff2428f05770409665e34281c591c, type: 2}
+  - {fileID: 11400000, guid: 45bee17fdc0b3a640b70ec8d555a2ddf, type: 2}
+  - {fileID: 11400000, guid: 741a462d873693340a157880a18c8068, type: 2}

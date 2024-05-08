@@ -15,3 +15,4 @@ MonoBehaviour:
   itemSprite: {fileID: 219011267, guid: be796c46a0c6171448583a3edeebfd71, type: 3}
   itemName: Forester Outfit
   animationId: 1
+  isLocked: 1

@@ -9,7 +9,8 @@ namespace InterviewTask {
 		[SerializeField] private string itemName;
 		[SerializeField] private int animationId;
 
-		public bool IsLocked { get; private set; }
+		[SerializeField] private bool isLocked;
+		public bool IsLocked { get => isLocked; set => isLocked = value; }
 
 		public Sprite ItemSprite => itemSprite;
 		public string ItemName => itemName;

@@ -15,3 +15,4 @@ MonoBehaviour:
   itemSprite: {fileID: -885393442, guid: 3b02d60c82f3e514aa5d7544c056e3a0, type: 3}
   itemName: Bob
   animationId: 1
+  isLocked: 1

@@ -15,3 +15,4 @@ MonoBehaviour:
   itemSprite: {fileID: -1855416868, guid: 91e31235e9342f1468d8fd662aaa3832, type: 3}
   itemName: Peasant Farmer Hat
   animationId: 1
+  isLocked: 1

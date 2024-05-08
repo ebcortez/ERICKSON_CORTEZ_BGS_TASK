@@ -15,3 +15,4 @@ MonoBehaviour:
   itemSprite: {fileID: -312406190, guid: 0ab68094b7b251c4b8e1be345c6270ca, type: 3}
   itemName: Dap
   animationId: 2
+  isLocked: 1
