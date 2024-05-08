@@ -7,8 +7,8 @@ namespace InterviewTask {
 		private static GameManager instance;
 		public static GameManager Instance => instance;
 
-		private const int EARNED_GOLD_PER_SECOND = 100;
-		private const int DEFAULT_GOLD = 1000;
+		private const int EARNED_GOLD_PER_SECOND = 10;
+		private const int DEFAULT_GOLD = 500;
 		private const string GOLD_ID = "GOLD_ID";
 
 		public int Gold { 

@@ -19,11 +19,13 @@ namespace InterviewTask {
 
 			if(canvas) canvas = GetComponent<Canvas>();
 
+			Hide();
+		}
+
+		private void Start() {
 			uiHatElements.LoadItems();
 			uiHairElements.LoadItems();
 			uiOutfitElements.LoadItems();
-
-			Hide();
 		}
 
 		public void Show() {
