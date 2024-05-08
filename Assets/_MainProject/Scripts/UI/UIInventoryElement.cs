@@ -6,7 +6,7 @@ using TMPro;
 using System;
 
 namespace InterviewTask {
-	public class UIInventoryData : MonoBehaviour {
+	public class UIInventoryElement : MonoBehaviour {
 		[SerializeField] private InventoryData itemData;
 		[SerializeField] private TextMeshProUGUI itemNameText;
 		[SerializeField] private Image itemIconImage;
@@ -23,7 +23,7 @@ namespace InterviewTask {
 
 		public void NextItem() {
 			itemData.CurrentItemId++;
-			if(itemData.CurrentItemId >= itemData.InventoryItemDatas.Length) {
+			if(itemData.CurrentItemId >= itemData.InventoryItemDatasCount) {
 				itemData.CurrentItemId = 0;
 			}
 
@@ -33,7 +33,7 @@ namespace InterviewTask {
 		public void PreviousItem() {
 			itemData.CurrentItemId--;
 			if(itemData.CurrentItemId < 0) {
-				itemData.CurrentItemId = itemData.InventoryItemDatas.Length - 1;
+				itemData.CurrentItemId = itemData.InventoryItemDatasCount - 1;
 			}
 
 			UpdateCurrentItem();

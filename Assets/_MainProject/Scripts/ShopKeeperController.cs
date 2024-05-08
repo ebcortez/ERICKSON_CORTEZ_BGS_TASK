@@ -10,12 +10,14 @@ namespace InterviewTask {
 		private void OnTriggerEnter2D(Collider2D collision) {
 			if(collision.CompareTag("Player")) {
 				controlPrompt.enabled = true;
+				collision.GetComponent<PlayerController>().ToggleCanInteract(true);
 			}
 		}
 
 		private void OnTriggerExit2D(Collider2D collision) {
 			if(collision.CompareTag("Player")) {
 				controlPrompt.enabled = false;
+				collision.GetComponent<PlayerController>().ToggleCanInteract(false);
 			}
 		}
 	}

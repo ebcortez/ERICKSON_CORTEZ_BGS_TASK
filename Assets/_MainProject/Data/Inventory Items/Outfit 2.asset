@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b05bdf1bfdcc1b459240ac898ed106f, type: 3}
   m_Name: Outfit 2
   m_EditorClassIdentifier: 
-  itemSprite: {fileID: 219011267, guid: be796c46a0c6171448583a3edeebfd71, type: 3}
+  itemSprite: {fileID: -1003367201, guid: be796c46a0c6171448583a3edeebfd71, type: 3}
   itemName: Forester Outfit
   animationId: 1
   isLocked: 1

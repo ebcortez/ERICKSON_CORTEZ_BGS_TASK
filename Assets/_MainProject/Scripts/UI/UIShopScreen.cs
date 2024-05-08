@@ -1,16 +1,16 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
 
 namespace InterviewTask {
-	public class UIInventoryScreen : MonoBehaviour {
-		private static UIInventoryScreen instance;
-		public static UIInventoryScreen Instance => instance;
+	public class UIShopScreen : MonoBehaviour {
+		private static UIShopScreen instance;
+		public static UIShopScreen Instance => instance;
 
 		[SerializeField] private Canvas canvas;
 
-		public UIInventoryElement uiHatsElement, uiHairsElement, uiOutfitsElement;
+		public UIShopElement uiHatElements, uiHairElements, uiOutfitElements;
 		public bool IsShown => canvas.enabled;
 		public Action onShow, onHide;
 
@@ -18,6 +18,10 @@ namespace InterviewTask {
 			instance = this;
 
 			if(canvas) canvas = GetComponent<Canvas>();
+
+			uiHatElements.LoadItems();
+			uiHairElements.LoadItems();
+			uiOutfitElements.LoadItems();
 
 			Hide();
 		}

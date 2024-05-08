@@ -9,7 +9,7 @@ namespace InterviewTask {
 		[SerializeField] private InventoryItemData[] inventoryItemDatas;
 
 		[field:NonSerialized] public int CurrentItemId { get; set; }
-		public InventoryItemData[] InventoryItemDatas => inventoryItemDatas;
+		public int InventoryItemDatasCount => inventoryItemDatas.Length;
 		public InventoryItemData CurrentInventoryItem => inventoryItemDatas[CurrentItemId]; 
 	}
 }

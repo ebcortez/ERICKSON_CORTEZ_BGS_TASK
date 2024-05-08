@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b05bdf1bfdcc1b459240ac898ed106f, type: 3}
   m_Name: Hat 3
   m_EditorClassIdentifier: 
-  itemSprite: {fileID: 697725235, guid: 591abd10fb734eb4984836434a5a8675, type: 3}
-  itemName: Pointy
+  itemSprite: {fileID: -1781671186, guid: 591abd10fb734eb4984836434a5a8675, type: 3}
+  itemName: Pointy Hat
   animationId: 2
   isLocked: 1

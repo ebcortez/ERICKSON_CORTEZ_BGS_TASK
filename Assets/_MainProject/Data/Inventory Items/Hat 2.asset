@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b05bdf1bfdcc1b459240ac898ed106f, type: 3}
   m_Name: Hat 2
   m_EditorClassIdentifier: 
-  itemSprite: {fileID: -1855416868, guid: 91e31235e9342f1468d8fd662aaa3832, type: 3}
-  itemName: Peasant Farmer Hat
+  itemSprite: {fileID: 98688844, guid: 91e31235e9342f1468d8fd662aaa3832, type: 3}
+  itemName: Farmer Hat
   animationId: 1
   isLocked: 1

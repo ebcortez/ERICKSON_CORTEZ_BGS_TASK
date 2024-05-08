@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b05bdf1bfdcc1b459240ac898ed106f, type: 3}
   m_Name: Outfit 1
   m_EditorClassIdentifier: 
-  itemSprite: {fileID: 823262596, guid: 9b23c55ade3adba419be8528f42cf5d0, type: 3}
+  itemSprite: {fileID: -586846960, guid: 9b23c55ade3adba419be8528f42cf5d0, type: 3}
   itemName: Boxer Shorts
   animationId: 0
+  isLocked: 0

@@ -20,24 +20,34 @@ namespace InterviewTask {
 		}
 
 		private void OnEnable() {
-			UIInventoryScreen.Instance.uiHatsData.onItemChanged +=	OnHatChanged;
-			UIInventoryScreen.Instance.uiHairsData.onItemChanged +=	OnHairChanged;
-			UIInventoryScreen.Instance.uiOutfitsData.onItemChanged += OnOutfitChanged;
+			UIInventoryScreen.Instance.uiHatsElement.onItemChanged +=	OnHatChanged;
+			UIInventoryScreen.Instance.uiHairsElement.onItemChanged +=	OnHairChanged;
+			UIInventoryScreen.Instance.uiOutfitsElement.onItemChanged += OnOutfitChanged;
 			UIInventoryScreen.Instance.onHide += () => canMove = true;
 			UIInventoryScreen.Instance.onShow += () => {
 				canMove = false;
 				FaceCamera();
 			};
+
+			UIShopScreen.Instance.onHide += () => canMove = true;
+			UIShopScreen.Instance.onShow += () => {
+				canMove = false;
+			};
 		}
 
 		private void OnDisable() {
-			UIInventoryScreen.Instance.uiHatsData.onItemChanged -= OnHatChanged;
-			UIInventoryScreen.Instance.uiHairsData.onItemChanged -= OnHairChanged;
-			UIInventoryScreen.Instance.uiOutfitsData.onItemChanged -= OnOutfitChanged;
+			UIInventoryScreen.Instance.uiHatsElement.onItemChanged -= OnHatChanged;
+			UIInventoryScreen.Instance.uiHairsElement.onItemChanged -= OnHairChanged;
+			UIInventoryScreen.Instance.uiOutfitsElement.onItemChanged -= OnOutfitChanged;
 			UIInventoryScreen.Instance.onHide -= () => canMove = true;
 			UIInventoryScreen.Instance.onShow -= () => {
 				canMove = false;
 				FaceCamera();
+			};
+
+			UIShopScreen.Instance.onHide -= () => canMove = true;
+			UIShopScreen.Instance.onShow -= () => {
+				canMove = false;
 			};
 		}
 
@@ -91,18 +101,26 @@ namespace InterviewTask {
 			if(UIInventoryScreen.Instance.IsShown) {
 				UIInventoryScreen.Instance.Hide();
 			} else {
-				UIInventoryScreen.Instance.Show();
+				if(canMove) {
+					UIInventoryScreen.Instance.Show();
+				}
 			}
 		}
 
 		public void Interact(InputAction.CallbackContext context) {
 			if(canInteract) {
-				Interact();
+				if(UIShopScreen.Instance.IsShown) {
+					UIShopScreen.Instance.Hide();
+				} else {
+					if(canMove) {
+						UIShopScreen.Instance.Show();
+					}
+				}
 			}
 		}
 
-		private void Interact() {
-			Debug.Log("Interact!");
+		public void ToggleCanInteract(bool canInteract) {
+			this.canInteract = canInteract;
 		}
 	}
 }

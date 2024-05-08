@@ -9,10 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b05bdf1bfdcc1b459240ac898ed106f, type: 3}
-  m_Name: Hair 3
+  m_Script: {fileID: 11500000, guid: 8943ccffb8bbb564e9769effae3f17f5, type: 3}
+  m_Name: Shop Outfits Data
   m_EditorClassIdentifier: 
-  itemSprite: {fileID: 1457462427, guid: 0ab68094b7b251c4b8e1be345c6270ca, type: 3}
-  itemName: Dap
-  animationId: 2
-  isLocked: 1
+  shopItemDatas:
+  - {fileID: 11400000, guid: 837f62053a894b141bcc2b42811f4fe4, type: 2}
+  - {fileID: 11400000, guid: a957088221efc6c48b804e4695b84d95, type: 2}

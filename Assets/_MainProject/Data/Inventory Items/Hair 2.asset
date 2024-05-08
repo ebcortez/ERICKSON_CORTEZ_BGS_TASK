@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b05bdf1bfdcc1b459240ac898ed106f, type: 3}
   m_Name: Hair 2
   m_EditorClassIdentifier: 
-  itemSprite: {fileID: -885393442, guid: 3b02d60c82f3e514aa5d7544c056e3a0, type: 3}
+  itemSprite: {fileID: 1617281549, guid: 3b02d60c82f3e514aa5d7544c056e3a0, type: 3}
   itemName: Bob
   animationId: 1
   isLocked: 1

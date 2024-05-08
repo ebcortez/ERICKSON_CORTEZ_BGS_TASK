@@ -9,10 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b05bdf1bfdcc1b459240ac898ed106f, type: 3}
-  m_Name: Hair 3
+  m_Script: {fileID: 11500000, guid: 63e6ef55db46a9140b8bf04108af4c3c, type: 3}
+  m_Name: Outfit 3
   m_EditorClassIdentifier: 
-  itemSprite: {fileID: 1457462427, guid: 0ab68094b7b251c4b8e1be345c6270ca, type: 3}
-  itemName: Dap
-  animationId: 2
-  isLocked: 1
+  inventoryItemData: {fileID: 11400000, guid: 741a462d873693340a157880a18c8068, type: 2}
+  price: 500
