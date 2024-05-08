@@ -7,20 +7,19 @@ namespace InterviewTask {
 	public class PlayerController : MonoBehaviour {
 		[SerializeField] private float speed;
 		[SerializeField] private float runSpeed;
-
 		[SerializeField] private Animator animator;
-		private Transform playerTransform;
+		private Rigidbody2D playerRigidbody;
 		private Vector2 inputMovement;
 		private bool canInteract = false;
 
 		private void Awake() {
-			playerTransform = transform;
+			playerRigidbody = GetComponent<Rigidbody2D>();
 		}
 
-		private void Update() {
+		private void FixedUpdate() {
 			float speedModifier = animator.GetBool(AnimationData.RUN_ANIMATION_NAME) ? runSpeed : speed;
 			Vector2 movement = inputMovement.normalized * Time.deltaTime * speedModifier;
-			playerTransform.position += (Vector3)movement;
+			playerRigidbody.MovePosition(playerRigidbody.position + movement);
 		}
 
 		public void Move(InputAction.CallbackContext context) {
